@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Diseño Web y SEO para Estudios Jurídicos | Páginas que Generan Casos</title>
+    <meta name="description" content="Creamos páginas web de alto rendimiento y estrategias SEO diseñadas exclusivamente para estudios de abogacía. Convertí visitas en consultas reales.">
+    <meta name="keywords" content="diseño web para abogados, seo para estudios juridicos, paginas web estudios juridicos, marketing digital abogados">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- PALETA DE COLORES PREMIUM (Corporate B2B) --- */
+        :root {
+            --color-primario: #0B1D33;   /* Azul Corporativo (Seriedad y Confianza) */
+            --color-secundario: #C5A880; /* Dorado / Bronce (Alta gama y Éxito) */
+            --color-oscuro: #1E293B;     /* Slate oscuro para textos legibles */
+            --color-claro: #F8FAFC;      /* Fondo gris azulado muy suave */
+            --color-blanco: #FFFFFF;
+            --color-exito: #25D366;      /* Verde WhatsApp */
+            --fuente-titulo: 'Cinzel', serif;
+            --fuente-cuerpo: 'Montserrat', sans-serif;
+        }
+
+        /* --- RESET Y ESTILOS GENERALES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-oscuro);
+            line-height: 1.6;
+            background-color: var(--color-blanco);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--fuente-titulo);
+            color: var(--color-primario);
+            font-weight: 700;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--color-primario);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+        }
+
+        .logo {
+            color: var(--color-blanco);
+            text-decoration: none;
+            font-family: var(--fuente-titulo);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--color-secundario);
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: var(--color-blanco);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: var(--color-secundario);
+        }
+
+        /* --- HERO SECTION (Propuesta de valor clara para socios de estudios) --- */
+        .hero {
+            background: linear-gradient(rgba(11, 29, 51, 0.95), rgba(11, 29, 51, 0.88)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            color: var(--color-blanco);
+        }
+
+        .hero-content {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            color: var(--color-blanco);
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--color-secundario);
+            display: block;
+            font-size: 1.8rem;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 35px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .btn-principal {
+            display: inline-block;
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-principal:hover {
+            background-color: #b5956d;
+            transform: translateY(-2px);
+        }
+
+        /* --- BENEFICIOS (Orientados al negocio jurídico) --- */
+        .beneficios {
+            background-color: var(--color-claro);
+            text-align: center;
+        }
+
+        .beneficios h2 {
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .beneficios h2 span {
+            color: var(--color-secundario);
+        }
+
+        .grid-beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .tarjeta-beneficio {
+            background-color: var(--color-blanco);
+            padding: 40px 30px;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(11, 29, 51, 0.03);
+            border-top: 4px solid var(--color-secundario);
+            text-align: left;
+        }
+
+        .tarjeta-beneficio h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-family: var(--fuente-cuerpo);
+            font-weight: 700;
+        }
+
+        .tarjeta-beneficio p {
+            font-size: 0.95rem;
+            color: #556980;
+        }
+
+        /* --- NUESTRO SISTEMA DE CONVERSIÓN --- */
+        .sistema h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .grid-sistema {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .paso-sistema {
+            border: 1px solid #E2E8F0;
+            padding: 30px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        .numero-paso {
+            font-family: var(--fuente-titulo);
+            color: var(--color-secundario);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .paso-sistema h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .paso-sistema p {
+            font-size: 0.9rem;
+            color: #556980;
+        }
+
+        /* --- PREGUNTAS FRECUENTES (FAQ del Abogado Socio) --- */
+        .faq {
+            background-color: var(--color-claro);
+        }
+
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: var(--color-blanco);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--color-secundario);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+            font-size: 1.05rem;
+            color: var(--color-primario);
+        }
+
+        details p {
+            margin-top: 12px;
+            color: #556980;
+            font-size: 0.95rem;
+        }
+
+        /* --- SECCIÓN CONTACTO / CONVERSION --- */
+        .contacto h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contacto p.subtitulo {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            color: #556980;
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+        }
+
+        .info-contacto h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        .info-contacto p {
+            margin-bottom: 20px;
+            color: #556980;
+        }
+
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--color-exito);
+            color: var(--color-blanco);
+            padding: 12px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .whatsapp-link:hover {
+            background-color: #1ebe57;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, select, textarea {
+            font-family: var(--fuente-cuerpo);
+            padding: 14px;
+            border: 1px solid #CBD5E1;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            color: var(--color-oscuro);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-primario);
+        }
+
+        button[type="submit"] {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.2s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #122f52;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--color-primario);
+            color: var(--color-blanco);
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.85rem;
+            border-top: 4px solid var(--color-secundario);
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero h1 span {
+                font-size: 1.3rem;
+            }
+            .contenedor {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">DESARROLLO<span>LEGAL</span></a>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#beneficios">Propuesta</a></li>
+                    <li><a href="#sistema">Estrategia</a></li>
+                    <li><a href="#faq">Preguntas</a></li>
+                    <li><a href="#contacto">Escribinos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Páginas Web y SEO para Estudios Jurídicos <span>Transformamos visitas en casos y consultas reales</span></h1>
+                <p>No creamos folletos digitales estáticos. Desarrollamos plataformas de alta conversión diseñadas exclusivamente para que los abogados y socios obtengan clientes calificados de forma constante.</p>
+                <a href="#contacto" class="btn-principal">Solicitar Diagnóstico Web Gratis</a>
+            </div>
+        </section>
+
+        <section id="beneficios" class="beneficios">
+            <div class="contenedor">
+                <h2>¿Por qué los estudios jurídicos <span>no logran clientes</span> en internet?</h2>
+                <div class="grid-beneficios">
+                    
+                    <div class="tarjeta-beneficio">
+                        <h3>Diseños sin estrategia</h3>
+                        <p>Tener un sitio web institucional tradicional ya no es suficiente. Si tu página no está pensada con flujos de conversión claros, las visitas se van a los 5 segundos sin iniciar una consulta.</p>
+                    </div>
+
+                    <div class="tarjeta-beneficio">
+                        <h3>Falta de SEO especializado</h3>
+                        <p>No sirve de nada estar en internet si nadie te encuentra. Posicionamos tu estudio para las búsquedas clave en tu área de práctica y localización geográfica (*ej: "abogado de sucesiones en Rosario"*).</p>
+                    </div>
+
+                    <div class="tarjeta-beneficio">
+                        <h3>Pérdida de leads calificados</h3>
+                        <p>Facilitamos el proceso de contacto. Integramos canales de comunicación inmediatos (WhatsApp profesional, formularios simplificados) para que el primer contacto legal sea instantáneo.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="sistema" class="sistema">
+            <div class="contenedor">
+                <h2>Nuestro Método de Captación Digital</h2>
+                <div class="grid-sistema">
+                    
+                    <div class="paso-sistema">
+                        <span class="numero-paso">01</span>
+                        <h3>Arquitectura Orientada al ROI</h3>
+                        <p>Diseñamos cada sección de la web con un único objetivo: que el usuario que tiene un problema legal tome la decisión de contactar a tu estudio inmediatamente.</p>
+                    </div>
+
+                    <div class="paso-sistema">
+                        <span class="numero-paso">02</span>
+                        <h3>SEO Local Avanzado</h3>
+                        <p>Optimizamos tu estructura y contenido para que Google te priorice frente a la competencia cuando tus potenciales clientes buscan asesoramiento de urgencia.</p>
+                    </div>
+
+                    <div class="paso-sistema">
+                        <span class="numero-paso">03</span>
+                        <h3>Velocidad y Seguridad</h3>
+                        <p>Sitios ultra-rápidos optimizados para dispositivos móviles. Incluimos certificados de seguridad SSL para garantizar la confidencialidad que tu estudio requiere.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="contenedor">
+                <h2>Preguntas Frecuentes de Abogados y Socios</h2>
+                <div class="faq-container">
+                    
+                    <details>
+                        <summary>Ya tenemos una web activa, ¿es necesario hacer una nueva?</summary>
+                        <p>Hacemos un diagnóstico previo. En muchos casos, reestructurar la web actual aplicando técnicas de SEO y optimización de conversión es suficiente para multiplicar los contactos sin tener que empezar de cero.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿En cuánto tiempo se empiezan a ver los resultados del SEO?</summary>
+                        <p>El posicionamiento orgánico en el sector legal es muy efectivo pero requiere maduración. Habitualmente, las optimizaciones de conversión en la web traen consultas inmediatas, mientras que el SEO consolida un flujo continuo de casos entre el tercer y sexto mes.</p>
+                    </details>
+
+                    <details>
+                        <summary>¿Qué necesitamos aportar como estudio para avanzar?</summary>
+                        <p>Nosotros nos encargamos del diseño, la programación y la optimización de los textos para Google. Solo necesitaremos información sobre sus áreas de especialización y el perfil del cliente que buscan captar.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <div class="contenedor">
+                <h2>Hablemos sobre el crecimiento de tu estudio</h2>
+                <p class="subtitulo">Completá el formulario para coordinar una breve llamada de diagnóstico. Analizaremos tu presencia online actual sin costo.</p>
+                
+                <div class="contacto-grid">
+                    
+                    <div class="info-contacto">
+                        <h3>¿Listo para escalar tus casos?</h3>
+                        <p>Sabemos que tu tiempo está dedicado a resolver los casos de tus clientes. Dejanos la captación digital a nosotros.</p>
+                        <p>Diseñamos soluciones a medida para estudios de abogacía que buscan liderar su sector.</p>
+                        
+                        <a href="https://wa.me/5493410000000?text=Hola,%20vi%20su%20web%20y%20quiero%20mejorar%20la%20pagina%20de%20mi%20estudio%20juridico." class="whatsapp-link" target="_blank" rel="noopener">
+                            💬 Hablar por WhatsApp ahora
+                        </a>
+                    </div>
+
+                    <div>
+                        <form action="#" method="POST">
+                            <input type="text" name="nombre" placeholder="Tu Nombre y Apellido" required>
+                            <input type="text" name="estudio" placeholder="Nombre de tu Estudio Jurídico" required>
+                            <input type="email" name="email" placeholder="Correo electrónico corporativo" required>
+                            <select name="interes" required>
+                                <option value="" disabled selected>¿Qué te interesa mejorar?</option>
+                                <option value="nueva-web">Crear una página web desde cero</option>
+                                <option value="rediseño">Rediseñar nuestra página actual</option>
+                                <option value="seo">Posicionar en Google (SEO / Google Maps)</option>
+                                <option value="todo">Ambas cosas (Web + Posicionamiento)</option>
+                            </select>
+                            <textarea name="mensaje" rows="4" placeholder="Breve detalle de tu situación o sitio actual..."></textarea>
+                            <button type="submit">Solicitar Análisis Gratuito</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contenedor" style="padding: 10px 0;">
+            <p>&copy; 2026 Desarrollo Legal. Diseñado para impulsar estudios de abogacía de alto rendimiento.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
